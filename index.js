@@ -6,7 +6,7 @@ import { settingsRouter } from "./routes/settings.js";
 import { userRouter } from "./routes/user.js";
 import { auth } from "./middleware/auth.js";
 
-// setup express
+// setup expressJS
 
 export const app = express();
 app.use(cors());
