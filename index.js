@@ -18,6 +18,10 @@ app.listen(port, () => {
     console.log("Port Connected");
 });
 
+app.get("/", (request, response) => {
+    response.send("Home Page");
+})
+
 //setup mongodb
 
 // const MONGO_URL = "mongodb://localhost";
