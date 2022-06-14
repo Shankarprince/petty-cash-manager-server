@@ -25,7 +25,7 @@ router.route("/signup").post(async (request, response) => {
 router.route("/login").post(async (request, response) => {
     const { email, password } = request.body;
     console.log(email, password);
-    const userFromDb = await client.db("b28wd").collection("user").findOne({});
+    const userFromDb = await client.db("b28wd").collection("user").findOne({ email : email });
     const storedPassword = userFromDb.password;
     const isPasswordMatch = await bcrypt.compare(password, storedPassword);
     if (isPasswordMatch === true) {
